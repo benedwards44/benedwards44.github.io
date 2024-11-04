@@ -7,30 +7,57 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
             crossorigin="anonymous"
         >
+        <style>
+            .loader {
+                width: 48px;
+                height: 48px;
+                border: 5px solid #000;
+                border-bottom-color: #FF3D00;
+                border-radius: 50%;
+                display: inline-block;
+                box-sizing: border-box;
+                animation: rotation 1s linear infinite;
+            }
+            
+            @keyframes rotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            } 
+        </style>
     </head>
     <body>
         <div class="col-lg-8 mx-auto p-4 py-md-5">
             <div class="text-center">
                 <h1>Book Database</h1>
             </div>
-            <div id="book-database"></div>
-            <script src="https://insideout.my.site.com/public/lightning/lightning.out.js"></script>
-            <script>
-                $Lightning.use(
-                    'c:bookDatabaseApp', // name of the Lightning Out app
-                    function () { // callback after the framework and app load
-                        $Lightning.createComponent(
-                            'c:bookDatabase', // top-level component of the Lightning Out app
-                            {}, // attributes to set on the component
-                            'book-database', // DOM element ID where the component is inserted
-                            function (cmp) { // callback after the component loads
-                                console.log('The component was created.');
-                            }
-                        );
-                    },
-                    'https://insideout.my.site.com' // Experience Cloud site endpoint
-                );
-            </script>
+            <hr/>
+            <div id="book-database">
+                <div class="text-center">
+                    <span class="loader"></span>
+                    Loading books...
+                </div>
+            </div>
         </div>
+        <script src="https://insideout.my.site.com/lightning/lightning.out.js"></script>
+        <script>
+            $Lightning.use(
+                'c:bookDatabaseApp', // name of the Lightning Out app
+                function () { // callback after the framework and app load
+                    $Lightning.createComponent(
+                        'c:bookDatabase', // top-level component of the Lightning Out app
+                        {}, // attributes to set on the component
+                        'book-database', // DOM element ID where the component is inserted
+                        function (cmp) { // callback after the component loads
+                            console.log('The component was created.');
+                        }
+                    );
+                },
+                'https://insideout.my.site.com' // Experience Cloud site endpoint
+            );
+        </script>
     </body>
 </html>
