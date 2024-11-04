@@ -35,12 +35,11 @@
                 <h1>Book Database</h1>
             </div>
             <hr/>
-            <div id="book-database">
-                <div class="text-center">
-                    <span class="loader"></span>
-                    Loading books...
-                </div>
+            <div class="text-center" id="loader">
+                <div class="loader"></div>
+                <div style="margin-top: 10px;">Loading book database...</div>
             </div>
+            <div id="book-database"></div>
         </div>
         <script src="https://insideout.my.site.com/lightning/lightning.out.js"></script>
         <script>
@@ -53,6 +52,7 @@
                         'book-database', // DOM element ID where the component is inserted
                         function (cmp) { // callback after the component loads
                             console.log('The component was created.');
+                            document.getElementById('loader').hidden = true
                         }
                     );
                 },
