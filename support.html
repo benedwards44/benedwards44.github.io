@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="h-full bg-black">
+<html class="h-full bg-grey-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
   </head>
   <body class="h-full">
     <div class="min-h-full">
-      <div class="bg-gray-200 pb-32">
+      <div class="bg-black pb-32">
         <nav class="bg-black">
           <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="border-b border-kiwibank">
@@ -39,7 +39,7 @@
         </nav>
         <header class="py-10">
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-black">Our latest offers</h1>
+            <h1 class="text-3xl font-bold tracking-tight text-white">This is personal banking support</h1>
           </div>
         </header>
       </div>
@@ -54,34 +54,17 @@
                     <div class="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-3">
                       <div class="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10">
                         <div class="text-center">
-                          <h3 id="tier-hobby" class="text-base/7 font-semibold">Home Loan</h3>
-                          <div class="mt-4 gap-x-2">
-                            <span class="text-5xl font-semibold tracking-tight text-gray-900">4.89%</span>
-                            <span class="text-base/7 font-semibold text-gray-900">p.a</span>
-                          </div>
-                          <p class="mt-6 text-base/7 font-semibold text-gray-900">1 year fixed.</p>
-                          <p class="text-base/7 text-gray-900">1 year fixed. Min 20% equity</p>
+                          <h3 class="text-2xl font-semibold mt-4">Call 0800 113 355 or +64 4 473 1133 from overseas.</h3>
                         </div>
                       </div>
                       <div class="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10">
                         <div class="text-center">
-                          <h3 id="tier-hobby" class="text-base/7 font-semibold">Home Loan</h3>
-                          <div class="mt-4 gap-x-2">
-                            <span class="text-5xl font-semibold tracking-tight text-gray-900">4.95%</span>
-                            <span class="text-base/7 font-semibold text-gray-900">p.a</span>
-                          </div>
-                          <p class="mt-6 text-base/7 font-semibold text-gray-900">2 years fixed.</p>
-                          <p class="text-base/7 text-gray-900">2 years fixed. Min 20% equity</p>
+                          <h3 class="text-2xl font-semibold mt-6">Find a branch</h3>
                         </div>
                       </div>
                       <div class="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10">
                         <div class="text-center">
-                          <h3 id="tier-hobby" class="text-base/7 font-semibold">Home Loan</h3>
-                          <div class="mt-4 gap-x-2">
-                            <span class="text-5xl font-semibold tracking-tight text-gray-900">6.35%</span>
-                            <span class="text-base/7 font-semibold text-gray-900">p.a</span>
-                          </div>
-                          <p class="mt-6 text-base/7 font-semibold text-gray-900">variable rate</p>
+                          <h3 class="text-2xl font-semibold mt-6">Mobile or Internet Banking</h3>
                         </div>
                       </div>
                     </div>
@@ -90,31 +73,8 @@
               </div>
             </div> 
           </div>
-          <div class="px-5 py-6 sm:px-6">
-            <h1 class="text-3xl font-bold tracking-tight text-white mb-5">First Home Buyer Calculator</h1>
-            <img src="home_loan_calc.png" />
-
-          </div>
         </div>
       </main>
     </div>
-    <script type='text/javascript'>
-      function initEmbeddedMessaging() {
-        try {
-          embeddedservice_bootstrap.settings.language = 'en_US';
-          embeddedservice_bootstrap.init(
-            '00DHu00000ZV4kv',
-            'Home_Loan_Agent_Deployment',
-            'https://kiwibankdemo.my.site.com/ESWHomeLoanAgentDeploy1755039731106',
-            {
-              scrt2URL: 'https://kiwibankdemo.my.salesforce-scrt.com'
-            }
-          );
-        } catch (err) {
-          console.error('Error loading Embedded Messaging: ', err);
-        }
-      };
-    </script>
-    <script type='text/javascript' src='https://kiwibankdemo.my.site.com/ESWHomeLoanAgentDeploy1755039731106/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
